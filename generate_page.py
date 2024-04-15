@@ -55,7 +55,8 @@ header = '''
 </head>
 <body>
 <div class="content">
-<h2>Problem list</h2>
+<h2>Problem set</h2>
+<h3>by <a href="https://benrosenberg.info">Ben Rosenberg</a></h3>
 <p>Problems are rated as follows:</p>
 <div>
 <table style="text-align: center; margin-left: auto; margin-right: auto;">

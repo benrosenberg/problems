@@ -256,6 +256,22 @@
                     "contents" : "Suppose the ant is continuously walking rather than taking discrete steps. At time $t$, what is the expected (Euclidean) distance of the ant from its starting point?"
                 }
             ]
+        },
+        {
+            "number" : 18,
+            "name" : "Tetromino packing",
+            "difficulty" : 4,
+            "contents" : "Given a set of 100 random tetrominos, determine the minimum area into which they can be packed.",
+            "extensions" : [
+                {
+                    "difficulty" : 5,
+                    "contents" : "Fix the dimensions of the board to width 10 and height 20. Suppose that lines are cleared when the entire line is filled with minos. The scoring system for line clears is that single line clears are worth 1 point, double line clears are 2, triple line clears are worth 6, and quadruple line clears are worth 10. All clears are worth 14 points. What is the expected maximum score achievable with perfect play, assuming the tetrominos come into the field in order and you are allowed to hold a piece as in typical gameplay?"
+                },
+                {
+                    "difficulty" : 6,
+                    "contents" : "Consider the above problems with $k$-minos."
+                }
+            ]
         }
     ]
 }
