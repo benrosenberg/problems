@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Ben Rosenberg" />
+  <title>Problem set</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <style>
+    body {
+        font-family: sans-serif;
+    }
+    ul {
+        list-style: none;
+        list-style-position: inside;
+        padding-left: 0;
+    }
+    li {
+        padding-left: 10px;
+    }
+    img {
+        position: relative;
+    }
+    .content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px;
+    }
+  </style>
+</head>
+<body>
+<div class="content">
+<h2>Problem list</h2>
+<p>Problems are rated as follows:</p>
+<div>
+<table style="text-align: center; margin-left: auto; margin-right: auto;">
+<tr><th>Difficulty</th><th>Meaning</th></tr>
+<tr><td><img src="media/0.png"></td><td>Easy</td></tr>
+<tr><td><img src="media/1.png"></td><td>Intermediate</td></tr>
+<tr><td><img src="media/2.png"></td><td>Hard</td></tr>
+<tr><td><img src="media/3.png"></td><td>Harder</td></tr>
+<tr><td><img src="media/4.png"></td><td>Hardest</td></tr>
+<tr><td><img src="media/5.png"></td><td>Dubious</td></tr>
+<tr><td><img src="media/6.png"></td><td>Questionable</td></tr>
+<tr><td><img src="media/7.png"></td><td>Stupid</td></tr>
+</table>
+<div>
+<div>
+<ul>
+<li>1. [Open-top cone] <img src="media/0.png"> What is the volume of an open-top cone, given its height, bottom radius, and top radius?</p>
+</li><li>2. [Rectangle inscribed in normal distribution] <img src="media/1.png"> What is the maximum area of a rectangle inscribed inside the normal distribution?</p>
+<ul><li>2.1 <img src="media/2.png"> What is the maximum area of an ellipse inscribed inside the normal distribution?</p>
+</li></ul></li><li>3. [Expected time to heads-tails sequence] <img src="media/2.png"> Given a sequence of heads and tails <code>HTHHTH</code>, find the expected time until the sequence is seen when flipping a coin repeatedly.</p>
+<ul><li>3.1 <img src="media/2.png"> What is the expected time until the above sequence is seen 5 times in a row?</p>
+</li><li>3.2 <img src="media/3.png"> Given an arbitrary sequence of heads and tails, find the expected time until the sequence is seen. Write a program that, given the sequence, returns the expected number of flips until the sequence is seen.</p>
+</li></ul></li><li>4. [TSP] <img src="media/2.png"> Given a list of 2-dimensional coordinates, determine the shortest time to visit all the coordinates and return to the starting point.</p>
+<ul><li>4.1 <img src="media/3.png"> Scale the edge lengths by average endpoint distance from the origin relative to one another and give the new solution. (For example, <span class="math inline">(0,0)-(0,1)</span> has avg distance of 0.5 from origin, as does <span class="math inline">(0,0)-(1,0)</span>, so nothing is scaled if these are the only two edges. But if we add <span class="math inline">(0,9)-(0,11)</span>, which has an average distance from the origin of 10, that edge would be scaled up to <span class="math inline">(\text{distance}/\text{min distance}) = 10/0.5 = 20</span>.)</p>
+</li><li>4.2 <img src="media/4.png"> Let <span class="math inline">N(x,y)</span> be the bivariate normal distribution. Choose points in <span class="math inline">\mathbb R^2</span> with probability according to <span class="math inline">N(x,y)</span>. What is the expected area enclosed by the TSP path?</p>
+</li><li>4.3 <img src="media/4.png"> Let <span class="math inline">N(x,y)</span> be the bivariate normal distribution. Choose points in <span class="math inline">\mathbb R^2</span> with probability according to <span class="math inline">N(x,y)</span>. What is the expected area enclosed by the TSP path, if you scale the edge lengths according to the above methodology?</p>
+</li></ul></li><li>5. [Quadrilateral in a square] <img src="media/4.png"> Choose 4 random points on the perimeter of a square (they could be all on the same side of the square). What is the expected area of the resulting (convex) quadrilateral?</p>
+<ul><li>5.1 <img src="media/4.png"> Suppose you are given a height function <span class="math inline">H(x,y) = x+y</span>. What is the expected volume of quadrilateral region?</p>
+</li><li>5.2 <img src="media/4.png"> Now choose <span class="math inline">n</span> points on the square. What is the expected area (and volume, using <span class="math inline">H(x,y)</span>), in terms of <span class="math inline">n</span>?</p>
+</li><li>5.3 <img src="media/5.png"> Now choose <span class="math inline">n</span> points on a regular <span class="math inline">k</span>-gon. What is the expected area (and volume, using <span class="math inline">H(x,y)</span>), in terms of <span class="math inline">n</span> and <span class="math inline">k</span>?</p>
+</li></ul></li><li>6. [Coin on a hexagon tiling] <img src="media/2.png"> Given a tiling of hexagons with diameter 1, place a coin of diameter 1 onto the surface at random. What is the expected number of hexagons that are touched by the coin?</p>
+</li><li>7. [Chord intersections] <img src="media/2.png"> Choose 3 random chords on a circle. What is the expected number of intersections between the chords?</p>
+<ul><li>7.1 <img src="media/2.png"> What about with <span class="math inline">n</span> chords?</p>
+</li></ul></li><li>8. [Random walk marbles] <img src="media/3.png"> Consider a random walk on a grid (distance-1 rook moves), in which a marble is placed every <span class="math inline">n</span> steps. What is the distribution of the distance between each marble?</p>
+<ul><li>8.1 <img src="media/2.png"> What is the distance between every 2 marbles (e.g., for path <span class="math inline">a\to b\to c \to d</span>, the distance between <span class="math inline">a</span> and <span class="math inline">c</span>, and <span class="math inline">b</span> and <span class="math inline">d</span>)?</p>
+</li></ul></li><li>9. [Enclosing random walk] <img src="media/4.png"> Consider a random walk on a grid (distance-1 rook moves), which ends once a nonempty region has been completely enclosed by the path. What is the expected area of the enclosed region?</p>
+<ul><li>9.1 <img src="media/4.png"> What is the expected perimeter of the enclosed region?</p>
+</li><li>9.2 <img src="media/4.png"> Let the walk continue for <span class="math inline">n</span> steps. What is the expected enclosed area formed by the path, in terms of <span class="math inline">n</span>?</p>
+</li><li>9.3 <img src="media/4.png"> Let the walk continue for <span class="math inline">n</span> steps. What is the expected enclosed area of the convex hull of the enclosed regions?</p>
+</li><li>9.4 <img src="media/5.png"> Let <span class="math inline">N(x,y)</span> (the bivariate normal distribution) be the height map for the plane. Start the random walk at the origin. What is the expected volume of the first enclosed region?</p>
+</li><li>9.5 <img src="media/5.png"> Let <span class="math inline">N(x,y)</span> (the bivariate normal distribution) be the height map for the plane. Start the random walk at the origin. What is the expected volume of the enclosed regions after <span class="math inline">n</span> steps?</p>
+</li><li>9.6 <img src="media/5.png"> Suppose the probability that a step is taken in a given direction from <span class="math inline">(x,y)</span> to <span class="math inline">(x&#39;,y&#39;)</span> on the random walk is given by the relative height of <span class="math inline">N(x&#39;,y&#39;)</span>, scaled so that all the direction probabilities sum to 1. How do the answers to the above questions change?</p>
+</li></ul></li><li>10. [Random shape created by lines] <img src="media/3.png"> Pick points in <span class="math inline">\mathbb R^{2}</span> according to <span class="math inline">N(x,y)</span> (the bivariate normal distribution) and assign them random angles (uniformly in the range <span class="math inline">(0, 2\pi)</span>) so that they create a line. Do this until there is at least one closed region. (This will be after 3 steps.) Take the closest region to the origin. What is its expected area?</p>
+<ul><li>10.1 <img src="media/3.png"> What is the volume of the first shape, using <span class="math inline">N(x,y)</span> as the height map?</p>
+</li><li>10.2 <img src="media/4.png"> Instead of lines, instead create rays starting at the chosen point and extending in the chosen direction. (This means that the first shape will no longer be guaranteed to be created after 3 steps.) What is the first shape’s expected area and what is its expected volume, using <span class="math inline">N(x,y)</span> as the height map?</p>
+</li></ul></li><li>11. [Cone closest to normal distribution] <img src="media/2.png"> What are the dimensions of the cone in <span class="math inline">\mathbb R^3</span> with the smallest absolute difference in overlap with the bivariate normal distribution <span class="math inline">N(x,y)</span>?</p>
+</li><li>12. [Random walk chase] <img src="media/3.png"> Consider a pair of walks in <span class="math inline">\mathbb R^2</span>. The first is a random walk, making distance-1 rook moves, which starts at time zero. The second is a walk that chases the first walk, making distance-1 king moves (able to use diagonals), which starts at time 1. What is the expected time before the second walk catches the first?</p>
+<ul><li>12.1 <img src="media/3.png"> What if the first walk instead makes knight moves, and the second walk is able to move arbitrary distances with queen moves?</p>
+</li><li>12.2 <img src="media/3.png"> What if the first walk instead makes knight moves, and the second walk is able to move arbitrary distances with bishop moves (only diagonally)?</p>
+</li></ul></li><li>13. [Convex hull area] <img src="media/2.png"> Given a list of 2-dimensional coordinates, find the area of the convex hull of those coordinates.</p>
+<ul><li>13.1 <img src="media/3.png"> Given a height map <span class="math inline">H(x,y) = x+y</span>, what is the volume of the above region?</p>
+</li></ul></li><li>14. [Tetrahedron collision] <img src="media/3.png"> Take two tetrahedrons of side length 1 aligned opposite each other on the <span class="math inline">x</span>-axis in <span class="math inline">\mathbb R^3</span>. Move them towards (into) each other until the tip of one touches the back of the other (and vice-versa, as they are the same size). What is the total volume of the resulting shape?</p>
+<ul><li>14.1 <img src="media/3.png"> Let <span class="math inline">D(x,y,z) = \sqrt{x+y+z}</span> be a density function over <span class="math inline">\mathbb R^3</span>. What is the volume of the shape, given this density?</p>
+</li><li>14.2 <img src="media/3.png"> Instead of a tetrahedron, suppose you have a <span class="math inline">k</span>-pyramid, where the base is a regular <span class="math inline">k</span>-gon, and the sides are triangles as in the tetrahedron. What is the total volume, in terms of <span class="math inline">k</span>, of the shape created by pushing the shapes into one another as before? What is its volume, using <span class="math inline">D(x,y,z)</span>?</p>
+</li><li>14.3 <img src="media/2.png"> What is the volume when taking <span class="math inline">k\to \infty</span> (a cone)?</p>
+</li></ul></li><li>15. [Area enclosed by chords] <img src="media/3.png"> Choose <span class="math inline">n</span> chords in a circle randomly. What is the expected area of the smallest shape enclosed by chords?</p>
+<ul><li>15.1 <img src="media/3.png"> What is the area of the smallest polygon enclosed by the chords (the shape is only bounded by chords, not the circle)? If there is no polygon, consider its area to be 0.</p>
+</li><li>15.2 <img src="media/3.png"> What is the area of the largest polygon enclosed by the chords (the shape is only bounded by chords, not the circle)? If there is no polygon, consider its area to be 0.</p>
+</li></ul></li><li>16. [Pentagon packing] <img src="media/2.png"> Suppose you have a square with sides of length 10. How much area is left after optimally packing the area with pentagons of side length 1?</p>
+<ul><li>16.1 <img src="media/3.png"> How much area is left after optimally packing the area with regular <span class="math inline">k</span>-gons?</p>
+</li><li>16.2 <img src="media/2.png"> For which <span class="math inline">k \geq 5</span> is the packing best (uncovered area minimized)?</p>
+</li></ul></li><li>17. [Ant on a cube] <img src="media/2.png"> Suppose there is an ant on a cube. The ant starts at a certain vertex and does a random walk along the edges of the cube, going from vertex to vertex. (At each step, the ant has a <span class="math inline">1/3</span> chance of choosing each direction.) How many steps are expected before the ant returns to its starting vertex?</p>
+<ul><li>17.1 <img src="media/2.png"> How does this vary when the ant is instead walking on a hypercube of dimension <span class="math inline">n\geq 2</span>?</p>
+</li><li>17.2 <img src="media/4.png"> Suppose the ant is continuously walking rather than taking discrete steps. At time <span class="math inline">t</span>, what is the expected (Euclidean) distance of the ant from its starting point?</p>
+</li></ul></li>
+</ul>
+</div>
+</div>
+</body>
+</html>

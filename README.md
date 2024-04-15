@@ -1,2 +1,3 @@
-# problems
-set of math and computer science problems, some possibly with solutions, some without
+# problem set
+
+try them [here](https://benrosenberg.info/posts/problems/index.html)!
