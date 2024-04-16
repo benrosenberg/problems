@@ -310,6 +310,13 @@
                     "contents" : "Take $s$ as before, and let $s'$ be a string over $\\Sigma$ with random length $\\ell$, where $k \\leq \\ell \\leq 2k$. Let $D_s = (Q_s, \\Sigma, \\delta_s, q_{0_s}, F_s)$ be the minimal DFA accepting $s$, and let $D_{s'} = (Q_{s'}, \\Sigma, \\delta_{s'}, q_{0_{s'}}, F_{s'})$ be the minimal DFA accepting $s'$. Perform a (1-indexed) topological sort over the states in $D_s$ and in $D_{s'}$, starting from $q_{0_s}$ and $q_{0_{s'}}$ respectively and choosing states in alphabetical order based on their in-edges, and denote these orderings by $T_s : Q_s \\to \\mathbb N$ and $T_{s'} : Q_{s'} \\to \\mathbb N$. Recall that the transition function $\\delta$ of a DFA $D = (Q, \\Sigma, \\delta, q_0, F)$ is of the form $\\delta : Q \\times \\Sigma \\to Q$. Let $T$ be the general topological sort order for a DFA $D$, and let the string representation $\\gamma(d)$ of a transition $d\\in \\delta$, where $d = ((q,\\sigma),q')$ for $q,q'\\in Q$ and $\\sigma\\in \\Sigma$, be the string `'[a&b>c]'` where `a` is $T(q)$, `b` is $\\sigma$, and $c$ is $T(q')$. Let the string representation $\\Gamma(D)$ of a DFA $D$ be given by the concatenation (represented here by $\\cap$) of the stringified elements of $\\delta$ as follows: $$\\Gamma(D) = \\bigcap_{d\\in\\delta}\\gamma(d)$$ What is the expected (Levenshtein) edit distance between $\\Gamma(D_s)$ and $\\Gamma(D_{s'})$?"
                 }
             ]
+        },
+        {
+            "number" : 19,
+            "name" : "Penrose resistors",
+            "difficulty" : 7,
+            "contents" : "What is the minimum equivalent resistance between vertices 2 edges apart on an infinite Penrose tiling of 1-ohm resistors?",
+            "extensions" : []
         }
     ]
 }
