@@ -8,41 +8,45 @@
             "extensions" : []
         },
         {
-            "number" : 13,
-            "name" : "Convex hull area",
-            "difficulty" : 2,
-            "contents" : "Given a list of 2-dimensional coordinates, find the area of the convex hull of those coordinates.",
+            "number" : 2,
+            "name" : "Rectangle inscribed in normal distribution",
+            "difficulty" : 0,
+            "contents" : "What is the maximum area of a rectangle inscribed inside the normal distribution?",
             "extensions" : [
                 {
-                    "difficulty" : 3,
-                    "contents" : "Given a height map $H(x,y) = x+y$, what is the volume of the above region?"
+                    "difficulty" : 1,
+                    "contents" : "What is the maximum area of an ellipse inscribed inside the normal distribution?"
+                },
+                {
+                    "difficulty" : 1,
+                    "contents" : "What are the dimensions of the cone in $\\mathbb R^3$ with the smallest absolute difference in overlap with the bivariate normal distribution $N(x,y)$?"
                 }
             ]
         },
         {
             "number" : 3,
             "name" : "Expected time to heads-tails sequence",
-            "difficulty" : 2,
-            "contents" : "Given a sequence of heads and tails `HTHHTH`, find the expected time until the sequence is seen when flipping a coin repeatedly.",
+            "difficulty" : 1,
+            "contents" : "Given a sequence of heads and tails `HTHTTH`, find the expected time until the sequence is seen when flipping a coin repeatedly.",
             "extensions" : [
                 {
-                    "difficulty" : 2,
+                    "difficulty" : 1,
                     "contents" : "What is the expected time until the above sequence is seen 5 times in a row?"
                 },
                 {
                     "difficulty" : 3,
-                    "contents" : "Given an arbitrary sequence of heads and tails, find the expected time until the sequence is seen. Write a program that, given the sequence, returns the expected number of flips until the sequence is seen."
+                    "contents" : "Given an arbitrary sequence of heads and tails, find the expected time until the sequence is seen."
                 }
             ]
         },
         {
             "number" : 4,
             "name" : "TSP",
-            "difficulty" : 2,
+            "difficulty" : 1,
             "contents" : "Given a list of 2-dimensional coordinates, determine the shortest time to visit all the coordinates and return to the starting point.",
             "extensions" : [
                 {
-                    "difficulty" : 3,
+                    "difficulty" : 2,
                     "contents" : "Scale the edge lengths by average endpoint distance from the origin relative to one another and give the new solution. (For example, $(0,0)-(0,1)$ has avg distance of 0.5 from origin, as does $(0,0)-(1,0)$, so nothing is scaled if these are the only two edges. But if we add $(0,9)-(0,11)$, which has an average distance from the origin of 10, that edge would be scaled up to $(\\text{distance}/\\text{min distance}) = 10/0.5 = 20$.)"
                 },
                 {
@@ -57,6 +61,114 @@
         },
         {
             "number" : 5,
+            "name" : "Coin on a hexagon tiling",
+            "difficulty" : 1,
+            "contents" : "Given a tiling of hexagons with diameter 1, place a coin of diameter 1 onto the surface at random. What is the expected number of hexagons that are touched by the coin?",
+            "extensions" : [
+                {
+                    "difficulty" : 0,
+                    "contents" : "Now consider a tiling of squares with side length 1. What is the expected number of squares that are touched by the coin?"
+                },
+                {
+                    "difficulty" : 3,
+                    "contents" : "Now consider a Penrose tiling with random offset in the plane and tile side length 1. What is the expected number of tiles that are touched by the coin?"
+                }
+            ]
+        },
+        {
+            "number" : 6,
+            "name" : "Ant on a cube",
+            "difficulty" : 1,
+            "contents" : "Suppose there is an ant on a cube. The ant starts at a certain vertex and does a random walk along the edges of the cube, going from vertex to vertex. (At each step, the ant has a $1/3$ chance of choosing each direction.) How many steps are expected before the ant returns to its starting vertex?",
+            "extensions" : [
+                {
+                    "difficulty" : 2,
+                    "contents" : "How does this vary when the ant is instead walking on a hypercube of dimension $n\\geq 2$?"
+                },
+                {
+                    "difficulty" : 4,
+                    "contents" : "Suppose the ant is continuously walking rather than taking discrete steps. At time $t$, what is the expected (Euclidean) distance of the ant from its starting point?"
+                }
+            ]
+        },
+        {
+            "number" : 7,
+            "name" : "Chord intersections",
+            "difficulty" : 1,
+            "contents" : "Choose 3 random chords on a circle. What is the expected number of intersections between the chords?",
+            "extensions" : [
+                {
+                    "difficulty" : 1,
+                    "contents" : "What about with $n$ chords?"
+                }
+            ]
+        },
+        {
+            "number" : 8,
+            "name" : "Random walk marbles",
+            "difficulty" : 2,
+            "contents" : "Consider a random walk on a grid (distance-1 rook moves), in which a marble is placed every $n$ steps. What is the distribution of the distance between any two marbles after $m$ steps?",
+            "extensions" : [
+                {
+                    "difficulty" : 1,
+                    "contents" : "What is the distribution of the distance between every 2 marbles (e.g., for path $a\\to b\\to c \\to d$, the distance between $a$ and $c$, and $b$ and $d$)?"
+                }
+            ]
+        },
+        {
+            "number" : 9,
+            "name" : "Enclosing random walk",
+            "difficulty" : 2,
+            "contents" : "Consider a random walk on a grid (distance-1 rook moves), which ends once a nonempty region has been completely enclosed by the path. What is the expected perimeter of the enclosed region?",
+            "extensions" : [
+                {
+                    "difficulty" : 3,
+                    "contents" : "What is the expected area of the enclosed region?"
+                },
+                {
+                    "difficulty" : 4,
+                    "contents" : "Let the walk continue for $n$ steps. What is the expected enclosed area formed by the path, in terms of $n$?"
+                },
+                {
+                    "difficulty" : 4,
+                    "contents" : "Let the walk continue for $n$ steps. What is the expected enclosed area of the convex hull of the enclosed regions?"
+                },
+                {
+                    "difficulty" : 5,
+                    "contents" : "Let $N(x,y)$ (the bivariate normal distribution) be the height map for the plane. Start the random walk at the origin. What is the expected volume of the first enclosed region?"
+                },
+                {
+                    "difficulty" : 5,
+                    "contents" : "Let $N(x,y)$ (the bivariate normal distribution) be the height map for the plane. Start the random walk at the origin. What is the expected volume of the enclosed regions after $n$ steps?"
+                },
+                {
+                    "difficulty" : 6,
+                    "contents" : "Suppose the probability that a step is taken in a given direction from $(x,y)$ to $(x',y')$ on the random walk is given by the relative height of $N(x',y')$, scaled so that all the direction probabilities sum to 1. How do the answers to the above questions change?"
+                },
+                {
+                    "difficulty" : 6,
+                    "contents" : "Suppose the probability that a step is taken in a given direction from $(x,y)$ to $(x',y')$ on the random walk is given by the relative height of $\\displaystyle z = \\frac{1 + \\cos(x)\\sin(x) + \\cos(y)\\sin(y)}{2}$, scaled so that all the direction probabilities sum to 1. How do the answers to the above questions change?"
+                }
+            ]
+        },
+        {
+            "number" : 10,
+            "name" : "Random shape created by lines",
+            "difficulty" : 3,
+            "contents" : "Pick points in $\\mathbb R^{2}$ according to $N(x,y)$ (the bivariate normal distribution) and assign them random angles (uniformly in the range $(0, 2\\pi)$) so that they create a line. Do this until there is at least one closed region. (This will be after 3 steps.) Take the closest region to the origin. What is its expected area?",
+            "extensions" : [
+                {
+                    "difficulty" : 3,
+                    "contents" : "What is the volume of the first shape, using $N(x,y)$ as the height map?"
+                },
+                {
+                    "difficulty" : 5,
+                    "contents" : "Instead of lines, instead create rays starting at the chosen point and extending in the chosen direction. (This means that the first shape will no longer be guaranteed to be created after 3 steps.) What is the first shape's expected area and what is its expected volume, using $N(x,y)$ as the height map?"
+                }
+            ]
+        },
+        {
+            "number" : 11,
             "name" : "Quadrilateral in a square",
             "difficulty" : 4,
             "contents" : "Choose 4 random points on the perimeter of a square (they could be all on the same side of the square). What is the expected area of the resulting (convex) quadrilateral?",
@@ -76,95 +188,9 @@
             ]
         },
         {
-            "number" : 6,
-            "name" : "Coin on a hexagon tiling",
-            "difficulty" : 2,
-            "contents" : "Given a tiling of hexagons with diameter 1, place a coin of diameter 1 onto the surface at random. What is the expected number of hexagons that are touched by the coin?",
-            "extensions" : []
-        },
-        {
-            "number" : 7,
-            "name" : "Chord intersections",
-            "difficulty" : 2,
-            "contents" : "Choose 3 random chords on a circle. What is the expected number of intersections between the chords?",
-            "extensions" : [
-                {
-                    "difficulty" : 2,
-                    "contents" : "What about with $n$ chords?"
-                }
-            ]
-        },
-        {
-            "number" : 8,
-            "name" : "Random walk marbles",
-            "difficulty" : 3,
-            "contents" : "Consider a random walk on a grid (distance-1 rook moves), in which a marble is placed every $n$ steps. What is the distribution of the distance between each marble?",
-            "extensions" : [
-                {
-                    "difficulty" : 2,
-                    "contents" : "What is the distance between every 2 marbles (e.g., for path $a\\to b\\to c \\to d$, the distance between $a$ and $c$, and $b$ and $d$)?"
-                }
-            ]
-        },
-        {
-            "number" : 9,
-            "name" : "Enclosing random walk",
-            "difficulty" : 4,
-            "contents" : "Consider a random walk on a grid (distance-1 rook moves), which ends once a nonempty region has been completely enclosed by the path. What is the expected area of the enclosed region?",
-            "extensions" : [
-                {
-                    "difficulty" : 4,
-                    "contents" : "What is the expected perimeter of the enclosed region?"
-                },
-                {
-                    "difficulty" : 4,
-                    "contents" : "Let the walk continue for $n$ steps. What is the expected enclosed area formed by the path, in terms of $n$?"
-                },
-                {
-                    "difficulty" : 4,
-                    "contents" : "Let the walk continue for $n$ steps. What is the expected enclosed area of the convex hull of the enclosed regions?"
-                },
-                {
-                    "difficulty" : 5,
-                    "contents" : "Let $N(x,y)$ (the bivariate normal distribution) be the height map for the plane. Start the random walk at the origin. What is the expected volume of the first enclosed region?"
-                },
-                {
-                    "difficulty" : 5,
-                    "contents" : "Let $N(x,y)$ (the bivariate normal distribution) be the height map for the plane. Start the random walk at the origin. What is the expected volume of the enclosed regions after $n$ steps?"
-                },
-                {
-                    "difficulty" : 5,
-                    "contents" : "Suppose the probability that a step is taken in a given direction from $(x,y)$ to $(x',y')$ on the random walk is given by the relative height of $N(x',y')$, scaled so that all the direction probabilities sum to 1. How do the answers to the above questions change?"
-                }
-            ]
-        },
-        {
-            "number" : 10,
-            "name" : "Random shape created by lines",
-            "difficulty" : 3,
-            "contents" : "Pick points in $\\mathbb R^{2}$ according to $N(x,y)$ (the bivariate normal distribution) and assign them random angles (uniformly in the range $(0, 2\\pi)$) so that they create a line. Do this until there is at least one closed region. (This will be after 3 steps.) Take the closest region to the origin. What is its expected area?",
-            "extensions" : [
-                {
-                    "difficulty" : 3,
-                    "contents" : "What is the volume of the first shape, using $N(x,y)$ as the height map?"
-                },
-                {
-                    "difficulty" : 4,
-                    "contents" : "Instead of lines, instead create rays starting at the chosen point and extending in the chosen direction. (This means that the first shape will no longer be guaranteed to be created after 3 steps.) What is the first shape's expected area and what is its expected volume, using $N(x,y)$ as the height map?"
-                }
-            ]
-        },
-        {
-            "number" : 11,
-            "name" : "Cone closest to normal distribution",
-            "difficulty" : 2,
-            "contents" : "What are the dimensions of the cone in $\\mathbb R^3$ with the smallest absolute difference in overlap with the bivariate normal distribution $N(x,y)$?",
-            "extensions" : []
-        },
-        {
             "number" : 12,
             "name" : "Random walk chase",
-            "difficulty" : 3,
+            "difficulty" : 2,
             "contents" : "Consider a pair of walks in $\\mathbb R^2$. The first is a random walk, making distance-1 rook moves, which starts at time zero. The second is a walk that chases the first walk, making distance-1 king moves (able to use diagonals), which starts at time 1. What is the expected time before the second walk catches the first?",
             "extensions" : [
                 {
@@ -178,25 +204,25 @@
             ]
         },
         {
-            "number" : 2,
-            "name" : "Rectangle inscribed in normal distribution",
-            "difficulty" : 1,
-            "contents" : "What is the maximum area of a rectangle inscribed inside the normal distribution?",
+            "number" : 13,
+            "name" : "Convex hull area",
+            "difficulty" : 2,
+            "contents" : "Given a list of 2-dimensional coordinates, find the area of the convex hull of those coordinates.",
             "extensions" : [
                 {
-                    "difficulty" : 2,
-                    "contents" : "What is the maximum area of an ellipse inscribed inside the normal distribution?"
+                    "difficulty" : 3,
+                    "contents" : "Given a height map $H(x,y) = x+y$, what is the volume of the above region?"
                 }
             ]
         },
         {
             "number" : 14,
             "name" : "Tetrahedron collision",
-            "difficulty" : 3,
+            "difficulty" : 1,
             "contents" : "Take two tetrahedrons of side length 1 aligned opposite each other on the $x$-axis in $\\mathbb R^3$. Move them towards (into) each other until the tip of one touches the back of the other (and vice-versa, as they are the same size). What is the total volume of the resulting shape?",
             "extensions" : [
                 {
-                    "difficulty" : 3,
+                    "difficulty" : 2,
                     "contents" : "Let $D(x,y,z) = \\sqrt{x+y+z}$ be a density function over $\\mathbb R^3$. What is the volume of the shape, given this density?"
                 },
                 {
@@ -204,7 +230,7 @@
                     "contents" : "Instead of a tetrahedron, suppose you have a $k$-pyramid, where the base is a regular $k$-gon, and the sides are triangles as in the tetrahedron. What is the total volume, in terms of $k$, of the shape created by pushing the shapes into one another as before? What is its volume, using $D(x,y,z)$?"
                 },
                 {
-                    "difficulty" : 2,
+                    "difficulty" : 1,
                     "contents" : "What is the volume when taking $k\\to \\infty$ (a cone)?"
                 }
             ]
@@ -212,9 +238,13 @@
         {
             "number" : 15,
             "name" : "Area enclosed by chords",
-            "difficulty" : 3,
+            "difficulty" : 2,
             "contents" : "Choose $n$ chords in a circle randomly. What is the expected area of the smallest shape enclosed by chords?",
             "extensions" : [
+                {
+                    "difficulty" : 2,
+                    "contents" : "What is the expected area of the largest shape enclosed by chords?"
+                },
                 {
                     "difficulty" : 3,
                     "contents" : "What is the area of the smallest polygon enclosed by the chords (the shape is only bounded by chords, not the circle)? If there is no polygon, consider its area to be 0."
@@ -233,32 +263,24 @@
             "extensions" : [
                 {
                     "difficulty" : 3,
-                    "contents" : "How much area is left after optimally packing the area with regular $k$-gons?"
+                    "contents" : "How much area is left after optimally packing the area with regular $k$-gons, for your choice of $k$?"
                 },
                 {
                     "difficulty" : 2,
                     "contents" : "For which $k \\geq 5$ is the packing best (uncovered area minimized)?"
+                },
+                {
+                    "difficulty" : 3,
+                    "contents" : "Suppose that after packing the area with pentagons of side length 1, you do another round of packing. You can choose the $k$ for which you pack as many regular $k$-gons into the remaining space as possible. (Each of the polygons you add in the second round must have the same size.) What $k$ do you choose, and what is the expected area left after this second round?"
+                },
+                {
+                    "difficulty" : 3,
+                    "contents" : "Now suppose that there are $m$ rounds. How does your above answer change?"
                 }
             ]
         },
         {
             "number" : 17,
-            "name" : "Ant on a cube",
-            "difficulty" : 2,
-            "contents" : "Suppose there is an ant on a cube. The ant starts at a certain vertex and does a random walk along the edges of the cube, going from vertex to vertex. (At each step, the ant has a $1/3$ chance of choosing each direction.) How many steps are expected before the ant returns to its starting vertex?",
-            "extensions" : [
-                {
-                    "difficulty" : 2,
-                    "contents" : "How does this vary when the ant is instead walking on a hypercube of dimension $n\\geq 2$?"
-                },
-                {
-                    "difficulty" : 4,
-                    "contents" : "Suppose the ant is continuously walking rather than taking discrete steps. At time $t$, what is the expected (Euclidean) distance of the ant from its starting point?"
-                }
-            ]
-        },
-        {
-            "number" : 18,
             "name" : "Tetromino packing",
             "difficulty" : 4,
             "contents" : "Given a set of 100 random tetrominos, determine the minimum area into which they can be packed.",
@@ -270,6 +292,22 @@
                 {
                     "difficulty" : 6,
                     "contents" : "Consider the above problems with $k$-minos."
+                }
+            ]
+        },
+        {
+            "number" : 18,
+            "name" : "Minimal automata states",
+            "difficulty" : 1,
+            "contents" : "Let $\\Sigma$ be an alphabet (set) of characters with $|\\Sigma| = n$ and let $k$ be a nonnegative integer. What is the expected number of states in the minimal NFA accepting $s$, where $s$ is a randomly generated string of characters from $\\Sigma$ with length $k$?",
+            "extensions" : [
+                {
+                    "difficulty" : 5,
+                    "contents" : "What about the minimal DFA?"
+                },
+                {
+                    "difficulty" : 7,
+                    "contents" : "Take $s$ as before, and let $s'$ be a string over $\\Sigma$ with random length $\\ell$, where $k \\leq \\ell \\leq 2k$. Let $D_s = (Q_s, \\Sigma, \\delta_s, q_{0_s}, F_s)$ be the minimal DFA accepting $s$, and let $D_{s'} = (Q_{s'}, \\Sigma, \\delta_{s'}, q_{0_{s'}}, F_{s'})$ be the minimal DFA accepting $s'$. Perform a (1-indexed) topological sort over the states in $D_s$ and in $D_{s'}$, starting from $q_{0_s}$ and $q_{0_{s'}}$ respectively and choosing states in alphabetical order based on their in-edges, and denote these orderings by $T_s : Q_s \\to \\mathbb N$ and $T_{s'} : Q_{s'} \\to \\mathbb N$. Recall that the transition function $\\delta$ of a DFA $D = (Q, \\Sigma, \\delta, q_0, F)$ is of the form $\\delta : Q \\times \\Sigma \\to Q$. Let $T$ be the general topological sort order for a DFA $D$, and let the string representation $\\gamma(d)$ of a transition $d\\in \\delta$, where $d = ((q,\\sigma),q')$ for $q,q'\\in Q$ and $\\sigma\\in \\Sigma$, be the string `'[a&b>c]'` where `a` is $T(q)$, `b` is $\\sigma$, and $c$ is $T(q')$. Let the string representation $\\Gamma(D)$ of a DFA $D$ be given by the concatenation (represented here by $\\cap$) of the stringified elements of $\\delta$ as follows: $$\\Gamma(D) = \\bigcap_{d\\in\\delta}\\gamma(d)$$ What is the expected edit distance between $\\Gamma(D_s)$ and $\\Gamma(D_{s'})$?"
                 }
             ]
         }
