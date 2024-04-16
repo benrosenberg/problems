@@ -68,7 +68,10 @@ header = '''
 <tr><td><img src="media/4.png"></td><td>Hardest</td></tr>
 <tr><td><img src="media/5.png"></td><td>Dubious</td></tr>
 <tr><td><img src="media/6.png"></td><td>Questionable</td></tr>
-<tr><td><img src="media/7.png"></td><td>Stupid</td></tr>
+<tr><td><img src="media/7.png"></td><td>Suspicious</td><!--amogus--></tr>
+<tr><td><img src="media/8.png"></td><td>Execrable</td></tr>
+<tr><td><img src="media/9.png"></td><td>Iniquitous</td></tr>
+<tr><td><img src="media/10.png"></td><td>Vile</td></tr>
 </table>
 <div>
 <div>
