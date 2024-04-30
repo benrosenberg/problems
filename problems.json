@@ -51,11 +51,11 @@
                     "contents" : "What is the expected time until the above sequence is seen 5 times in a row?"
                 },
                 {
-                    "difficulty" : 3,
+                    "difficulty" : 2,
                     "contents" : "Given an arbitrary sequence of heads and tails, find the expected time until the sequence is seen."
                 },
                 {
-                    "difficulty" : 3,
+                    "difficulty" : 2,
                     "contents" : "Given a discrete random variable and an arbitrary sequence of its outputs, find the expected time until the sequence is seen."
                 }
             ]
