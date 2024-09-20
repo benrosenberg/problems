@@ -92,7 +92,7 @@
                 },
                 {
                     "difficulty" : 3,
-                    "contents" : "Now consider a (P2) Penrose tiling with random offset in the plane and tile side length 1. What is the expected number of tiles that are touched by the coin?"
+                    "contents" : "Now consider a (P3) Penrose tiling with random offset in the plane and tile side length 1. What is the expected number of tiles that are touched by the coin?"
                 }
             ]
         },
@@ -336,7 +336,7 @@
             "number" : 19,
             "name" : "Penrose resistors",
             "difficulty" : 8,
-            "contents" : "What is the minimum equivalent resistance between vertices 2 edges apart on an infinite (P2) Penrose tiling of 1-ohm resistors?",
+            "contents" : "What is the minimum equivalent resistance between vertices 2 edges apart on an infinite (P3) Penrose tiling of 1-ohm resistors?",
             "extensions" : []
         },
         {
