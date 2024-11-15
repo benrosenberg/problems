@@ -109,6 +109,38 @@
                 {
                     "difficulty" : 3,
                     "contents" : "Suppose the ant is continuously walking rather than taking discrete steps. At time $t$, what is the expected (Euclidean) distance of the ant from its starting point?"
+                },
+                {
+                    "difficulty" : 3,
+                    "contents" : "Suppose ants arrive at a vertex on a cube continuously with rate $r$ (so interarrival times $T_n$ have distribution $\\text{Exp}(r)$, $n \\geq 0$). Each ant behaves as before, but ants wait an additional $k$ units of time before moving one more step in the cube, where $k$ is the number of ants present at that state when the ant first arrived. What is the expected time until there are $X$ ants at the opposite corner of the cube?"
+                },
+                {
+                    "difficulty" : 3,
+                    "contents" : "Now assume instead of waiting k steps the ants wait $\\lfloor k/2 \\rfloor$ steps. How does the above answer change?"
+                },
+                {
+                    "difficulty" : 4,
+                    "contents" : "Assume instead of a cube the ants are on an infinite grid, starting at $(0,0)$, and are able to move one unit in the four cardinal directions. Derive a formula for the time until there are $X$ ants at position $(i,j)$ on the grid."
+                },
+                {
+                    "difficulty" : 4,
+                    "contents" : "Now allow ants to move one unit diagonally, so their moves match those of a king's in chess. How does your formula change?"
+                },
+                {
+                    "difficulty" : 4,
+                    "contents" : "How does your above answer change if the ants move like knights in chess?"
+                },
+                {
+                    "difficulty" : 5,
+                    "contents" : "Now for grid point $(i,j)$, consider each of the following functions on $i$ and $j$ as a value for $k$: $\\min(i,j)$, $\\max(i,j)$, $i+j$, $i\\cdot j$, $i-j$, $i//j$ (integer division), $i\\bmod j$, $i^j$, $i\\& j$ (binary and), $i \\mid j$ (binary or), $\\delta(i,j)$ (Kronecker delta), $(i+j)/2$. How does the time until there are $X$ ants at $(i,j)$ change?"
+                },
+                {
+                    "difficulty" : 5,
+                    "contents" : "Suppose the ants can now move like any chess piece - pawn, knight, bishop, rook, queen, or king. The piece is chosen uniformly at random by each ant each time it moves. For pieces that can move infinitely, let the move distance have distribution $\\text{Exp}(r)$, where $r$ is the ants' arrival rate. Revise your answers to the above questions."
+                },
+                {
+                    "difficulty" : 6,
+                    "contents" : "Generalize each of the above grid problems to $\\mathbb Z^N$ (the above grid problems assume $\\mathbb Z^2$)."
                 }
             ]
         },
